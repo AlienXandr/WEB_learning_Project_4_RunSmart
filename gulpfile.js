@@ -19,10 +19,11 @@ gulp.task('server', function () {
 gulp.task('styles', function (){
     return gulp.src("src/sass/*.+(scss|sass)")  // Взяли файл scss или sass
         .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))  // Скомпилировали его в файл (.sass или .scss) в НЕсжатом стиле кода
-        .pipe(autoprefixer({
-			Browserslist: ['last 2 versions'],
-            cascade: false
-		}))
+        // .pipe(autoprefixer({
+		// 	browsers: ['last 2 versions'],
+        //     cascade: false
+		// }))
+        .pipe(autoprefixer())                    // Настройки берутся из browserslist в package.json
         .pipe(gulp.dest("src/css"));             // И положили файл (.sass или .scss) в папку css
 });
 
@@ -34,18 +35,20 @@ gulp.task('styles_min', function (){
             prefix: "",
             suffix: ".min",
         }))
-        .pipe(autoprefixer({
-			Browserslist: ['last 2 versions'],
-            cascade: false
-		}))
+        // .pipe(autoprefixer({
+		// 	browsers: ['last 2 versions'],
+        //     cascade: false
+		// }))
+        .pipe(autoprefixer())                   // Настройки берутся из browserslist в package.json
         .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(gulp.dest("src/css"))             // И положили файл (.sass или .scss) в папку css
         .pipe(browserSync.stream());            // После изменения файла запустить browserSync
 });
 
+// Наблюдать за файлами. Если произошло событие "Изменение", то запустить функцию
 gulp.task('watch', function (){
-    // Наблюдать за файлами. Если произошло событие "Изменение", то запустить функцию
-    gulp.watch("src/sass/*.+(scss|sass)").on("change", gulp.parallel('styles', 'styles_min'))
+    // src/sass/**/*.+(scss|sass) => /**/ -  следить за файлами в подкаталогах
+    gulp.watch("src/sass/**/*.+(scss|sass)").on("change", gulp.parallel('styles', 'styles_min'))
     gulp.watch("src/*.html").on("change", browserSync.reload)
     // gulp.watch("src/sass/*.+(scss|sass)", gulp.parallel('styles'))
     // gulp.watch("src/*.html").on("change", browserSync.reload)
