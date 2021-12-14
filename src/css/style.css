@@ -9,7 +9,7 @@
 
 .promo {
   min-height: 650px;
-  padding: 21px 0 93px 0;
+  padding: 21px 20px 93px 20px;
   background: url("../../img/main_bg.jpg") center center/cover no-repeat;
 }
 .promo__wrapper {
@@ -117,4 +117,122 @@
   width: 300px;
   height: 50px;
   font-size: 16px;
+}
+
+@media (max-width: 1199px) {
+  .promo {
+    min-height: 500px;
+    padding: 21px 20px 50px 20px;
+  }
+  .promo__wrapper {
+    margin-top: 40px;
+  }
+  .promo__icons {
+    margin-top: 40px;
+  }
+
+  .button_main {
+    margin-top: 40px;
+  }
+}
+@media (max-width: 991px) {
+  .container {
+    max-width: 850px;
+  }
+
+  .promo {
+    min-height: 400px;
+    padding: 21px 20px 30px 20px;
+  }
+  .promo__wrapper {
+    margin-top: 30px;
+  }
+  .promo__icons {
+    margin-top: 20px;
+  }
+
+  .button_main {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    max-width: 700px;
+  }
+
+  .header__logo {
+    width: 200px;
+  }
+
+  .promo {
+    min-height: 300px;
+    padding: 20px 20px 20px 20px;
+  }
+  .promo__header {
+    font-size: 35px;
+  }
+  .promo__subheader {
+    margin-top: 8px;
+    font-size: 20px;
+  }
+  .promo__wrapper {
+    margin-top: 20px;
+  }
+  .promo__icons {
+    margin-top: 10px;
+  }
+  .promo__icon {
+    width: 90px;
+    font-size: 12px;
+  }
+  .promo__icon img {
+    margin: 0 auto 10px auto;
+  }
+
+  .button_main {
+    margin-top: 10px;
+  }
+}
+@media (max-width: 575px) {
+  .container {
+    max-width: 500px;
+  }
+
+  .header {
+    display: block;
+    position: relative;
+  }
+  .header__logo {
+    display: block;
+    margin: 0 auto 5px auto;
+    width: 200px;
+  }
+  .header__official {
+    display: inline-block;
+    max-width: 200px;
+  }
+  .header__contacts {
+    display: inline-block;
+    max-width: 200px;
+    position: absolute;
+    right: 0;
+  }
+
+  .promo__icons {
+    display: none;
+  }
+  .promo__header {
+    font-size: 30px;
+  }
+  .promo__subheader {
+    margin-top: 8px;
+    font-size: 18px;
+  }
+
+  .button_main {
+    margin-top: 10px;
+    width: 250px;
+    height: 40px;
+    font-size: 14px;
+  }
 }

@@ -1,0 +1,133 @@
+@media (max-width: 1199px){
+  .promo{
+    min-height: 500px;
+    padding: 21px 20px 50px 20px;
+    &__wrapper{
+      margin-top: 40px;
+    }
+    &__icons{
+      margin-top: 40px;
+    }
+  }
+
+  .button{
+    &_main{
+      margin-top: 40px;
+    }
+  }
+}
+
+@media (max-width: 991px){
+  .container{
+    max-width: 850px;
+  }
+
+  .promo{
+    min-height: 400px;
+    padding: 21px 20px 30px 20px;
+    &__wrapper{
+      margin-top: 30px;
+    }
+    &__icons{
+      margin-top: 20px;
+    }
+  }
+
+  .button{
+    &_main{
+      margin-top: 30px;
+    }
+  }
+}
+
+@media (max-width: 767px){
+  .container{
+    max-width: 700px;
+  }
+
+  .header{
+    &__logo{
+      width: 200px;
+    }
+  }
+
+  .promo{
+    min-height: 300px;
+    padding: 20px 20px 20px 20px;
+    &__header{
+      font-size: 35px;
+    }
+    &__subheader{
+      margin-top: 8px;
+      font-size: 20px;
+    }
+    &__wrapper{
+      margin-top: 20px;
+    }
+    &__icons{
+      margin-top: 10px;
+    }
+    &__icon{
+      width: 90px;
+      font-size: 12px;
+      img{
+        margin: 0 auto 10px auto;
+      }
+    }
+  }
+
+  .button{
+    &_main{
+      margin-top: 10px;
+    }
+  }
+
+}
+
+@media (max-width: 575px){
+  .container{
+    max-width: 500px;
+  }
+
+  .header{
+    display: block;
+    position: relative;
+    &__logo{
+      display: block;
+      margin: 0 auto 5px auto;
+      width: 200px;
+    }
+    &__official{
+      display: inline-block;
+      max-width: 200px;
+    }
+    &__contacts{
+      display: inline-block;
+      max-width: 200px;
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  .promo{
+    &__icons{
+      display: none;
+    }
+    &__header{
+      font-size: 30px;
+    }
+    &__subheader{
+      margin-top: 8px;
+      font-size: 18px;
+    }
+  }
+
+  .button{
+    &_main{
+      margin-top: 10px;
+      width: 250px;
+      height: 40px;
+      font-size: 14px;
+    }
+  }
+}
