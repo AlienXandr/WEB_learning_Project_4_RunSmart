@@ -15,13 +15,20 @@
   font-family: "Museo Sans Cyrl", sans-serif;
   font-size: 30px;
   font-weight: 700;
+  text-transform: uppercase;
   color: #0d0d0d;
+}
+.title_left {
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: left;
 }
 
 .promo {
   min-height: 650px;
   padding: 21px 20px 93px 20px;
-  background: url("../../img/main_bg.jpg") center center/cover no-repeat;
+  background: url("../img/main_bg.jpg") center center/cover no-repeat;
 }
 .promo__wrapper {
   display: flex;
@@ -129,6 +136,11 @@
   height: 50px;
   font-size: 16px;
 }
+.button_submit {
+  width: 100%;
+  height: 55px;
+  font-size: 16px;
+}
 
 .benefits {
   min-height: 470px;
@@ -175,6 +187,40 @@
 .benefits__item .desсr a {
   text-decoration: underline;
   color: #ff0000;
+}
+
+.consultation {
+  min-height: 680px;
+  padding: 100px 0 92px 0;
+  background: url("../img/consultation_bg.jpg") center center/cover no-repeat;
+}
+.consultation__descr {
+  margin-top: 80px;
+  font-family: "Museo Sans Cyrl", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.feed-form {
+  margin-top: 36px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+.feed-form input {
+  height: 50px;
+  padding: 0 20px;
+  font-family: "Museo Sans Cyrl", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 15px;
+}
+.feed-form input:nth-child(3) {
+  margin-bottom: 20px;
 }
 
 @media (max-width: 1199px) {
